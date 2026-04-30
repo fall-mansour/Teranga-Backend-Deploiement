@@ -20,11 +20,9 @@ const PiecesRoutes = require('./routes/ajoutpieces');
 const StockRoutes = require('./routes/stock');
 const DashboardRoutes = require('./routes/dashboard');
 
-app.use(cors({
-  origin: ['https://teranga-motors.vercel.app', 'http://localhost:4200'], 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+
+app.use(cors());
+app.use(express.json()); // Indispensable pour lire le corps (body) des requêtes POST/PUT
 
 /**
  * CONFIGURATION UNIQUE DU DOSSIER UPLOADS
