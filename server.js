@@ -24,7 +24,7 @@ const DashboardRoutes = require('./routes/dashboard');
 app.use(cors()); // Autorise vos deux Angular (Client et Gestion)
 // Remplace la ligne 25 par ceci :
 app.use(cors({
-  origin: ['https://teranga-front-deploiement.vercel.app', 'http://localhost:4200'], 
+  origin: ['https://teranga-motors.vercel.app', 'http://localhost:4200'], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
