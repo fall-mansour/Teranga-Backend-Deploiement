@@ -20,9 +20,6 @@ const PiecesRoutes = require('./routes/ajoutpieces');
 const StockRoutes = require('./routes/stock');
 const DashboardRoutes = require('./routes/dashboard');
 
-// --- MIDDLEWARES ---
-app.use(cors()); // Autorise vos deux Angular (Client et Gestion)
-// Remplace la ligne 25 par ceci :
 app.use(cors({
   origin: ['https://teranga-motors.vercel.app', 'http://localhost:4200'], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
