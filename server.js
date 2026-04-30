@@ -22,7 +22,12 @@ const DashboardRoutes = require('./routes/dashboard');
 
 // --- MIDDLEWARES ---
 app.use(cors()); // Autorise vos deux Angular (Client et Gestion)
-app.use(express.json());
+// Remplace la ligne 25 par ceci :
+app.use(cors({
+  origin: ['https://teranga-front-deploiement.vercel.app', 'http://localhost:4200'], 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 /**
  * CONFIGURATION UNIQUE DU DOSSIER UPLOADS
