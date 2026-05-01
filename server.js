@@ -29,7 +29,7 @@ app.use(express.json()); // Indispensable pour lire le corps (body) des requête
  * On utilise le dossier 'uploads' situé dans le dossier de ce serveur.
  * Toutes les images de 'SmartTech Central' doivent être ici.
  */
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 // --- ROUTES API ---
 
